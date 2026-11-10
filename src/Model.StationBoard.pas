@@ -44,6 +44,9 @@ begin
     // Format and safely URL-encode the Swiss train station parameter
     var TargetUrl := Format(FMT_API_STATIONBOARD_REQUEST, [TNetEncoding.URL.Encode(StationName)]);
 
+    // Simulation of very long request
+    //Sleep(10000);
+
     var Response := Client.Get(TargetUrl);
 
     if Response.StatusCode <> 200 then
