@@ -1,0 +1,18 @@
+# Delphi compiler outputs
+*.dcu
+*.dres
+*.rsm
+*.map
+*.~*
+
+# Delphi project outputs & configurations
+__recovery/
+ModelSupport_*/
+*.local
+*.identcache
+*.stat
+*.tvsconfig
+
+# Output directories
+bin/
+dcu/
