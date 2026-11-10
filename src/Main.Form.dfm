@@ -34,7 +34,9 @@ object frmMain: TfrmMain
     Width = 75
     Height = 25
     Caption = 'Search'
+    Default = True
     TabOrder = 1
+    WordWrap = True
     OnClick = btnSearchClick
   end
   object mResult: TMemo

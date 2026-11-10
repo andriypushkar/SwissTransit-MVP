@@ -128,10 +128,12 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="src\Main.Form.pas">
-            <Form>Form1</Form>
+            <Form>frmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="src\Model.StationBoard.pas"/>
+        <DCCReference Include="src\View.Interfaces.pas"/>
+        <DCCReference Include="src\Presenter.StationBoard.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

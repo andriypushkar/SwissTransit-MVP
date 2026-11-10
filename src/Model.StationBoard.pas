@@ -25,7 +25,8 @@ type
   { Service class dealing with OpenData Swiss API communication }
   TTransportService = class
   private
-    const API_ENDPOINT = 'https://opendata.ch';
+    const API_ENDPOINT = 'http://transport.opendata.ch/v1';
+    const FMT_API_STATIONBOARD_REQUEST = API_ENDPOINT + '/stationboard?station=%s';
   public
     function FetchDepartures(const StationName: string): TObjectList<TTrainConnection>;
   end;
@@ -41,7 +42,7 @@ begin
   var Client := THTTPClient.Create;
   try
     // Format and safely URL-encode the Swiss train station parameter
-    var TargetUrl := Format(API_ENDPOINT, [TNetEncoding.URL.Encode(StationName)]);
+    var TargetUrl := Format(FMT_API_STATIONBOARD_REQUEST, [TNetEncoding.URL.Encode(StationName)]);
 
     var Response := Client.Get(TargetUrl);
 
